@@ -30,9 +30,9 @@ gulp.task('ts-compile', function() {
 		.pipe(gulp.dest(config.tsOutputPath));
 });
 
-gulp.task('serve', ['ts-lint', 'ts-compile'], function() {
+gulp.task('serve', ['ts-lint'], function() {
 
-	gulp.watch(config.allTs, ['ts-lint', 'ts-compile']);
+	gulp.watch(config.allTs, ['ts-lint']);
 
 	browserSync({
 		port: 3000,

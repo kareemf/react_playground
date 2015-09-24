@@ -22,6 +22,12 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-tslint": "^3.3.0-beta",
     "gulp-typescript": "^2.8.2",
-    "superstatic": "^1.2.3"
+    "superstatic": "^1.2.3",
+    "webpack": "^1.12.2"
+  },
+  "dependencies": {
+    "react": "^0.13.3",
+    "ts-loader": "^0.5.5",
+    "typescript": "^1.6.2"
   }
 }
