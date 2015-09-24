@@ -20,7 +20,7 @@
     "browser-sync": "^2.9.3",
     "gulp": "^3.9.0",
     "gulp-sourcemaps": "^1.5.2",
-    "gulp-tslint": "^3.2.0",
+    "gulp-tslint": "^3.3.0-beta",
     "gulp-typescript": "^2.8.2",
     "superstatic": "^1.2.3"
   }
