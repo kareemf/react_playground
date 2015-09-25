@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 
+var del = require('del');
+
 var sourcemaps = require('gulp-sourcemaps');
 var tsc = require('gulp-typescript');
 var tslint = require('gulp-tslint');
@@ -11,6 +13,10 @@ var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var webpackConfig = require('./webpack.config.js');
 
+gulp.task('clean', function(){
+    return del(config.tsOutputPath);
+});
+
 gulp.task('ts-lint', function() {
 	return gulp
         .src(config.allTs)
@@ -18,7 +24,7 @@ gulp.task('ts-lint', function() {
 		.pipe(tslint.report('prose', {
 			emitError: false
 		}))
-})
+});
 
 gulp.task('ts-compile', function() {
 	var sourceTsFiles = config.allTs.concat(config.typings);
@@ -33,7 +39,7 @@ gulp.task('ts-compile', function() {
 		.pipe(gulp.dest(config.tsOutputPath));
 });
 
-gulp.task('webpack:build', function(callback) {
+gulp.task('webpack:build', ['clean'], function(callback) {
     // modify some webpack config options
     var myConfig = Object.create(webpackConfig);
     myConfig.plugins = (myConfig.plugins || []).concat(

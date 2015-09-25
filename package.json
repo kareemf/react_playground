@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ajtowf/ng2_play#readme",
   "devDependencies": {
+    "del": "^2.0.2",
     "file-loader": "^0.8.4",
     "gulp": "^3.9.0",
     "gulp-sourcemaps": "^1.5.2",
