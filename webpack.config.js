@@ -23,7 +23,11 @@ module.exports = {
         include: [
           path.resolve(__dirname, 'app'),
         ],
-       },
+      },
+      {
+        test: /\.css$/,
+        loader: "style-loader!css-loader"
+      },
        {
         test: /\.html$/,
         loader: "file?name=[name].[ext]",
