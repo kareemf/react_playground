@@ -18,7 +18,7 @@ module.exports = {
     loaders: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
+        loaders: ['react-hot', 'ts-loader'],
         include: [
           path.resolve(__dirname, 'app'),
         ],
