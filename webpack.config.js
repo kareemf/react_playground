@@ -1,7 +1,14 @@
+var path = require('path');
+
 module.exports = {
-  entry: './app/app.tsx',
+  context: __dirname + '/app',
+  entry: {
+    ts: './app.tsx',
+    html: './index.html'
+  },
   output: {
-    filename: './app/bundle.js'
+    path:  __dirname + '/dist',
+    filename: 'bundle.js'
   },
   devtool: 'source-map',
   resolve: {
@@ -9,7 +16,17 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.ts(x)?$/, loader: 'ts-loader' }
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        include: [
+          path.resolve(__dirname, 'app'),
+        ],
+       },
+       {
+        test: /\.html$/,
+        loader: "file?name=[name].[ext]",
+      }
     ]
   }
 }

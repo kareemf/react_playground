@@ -47,7 +47,6 @@ gulp.task('serve', ['ts-lint'], function() {
       middleware: superstatic({ debug: false})
     }
 	});
-
 });
 
 gulp.task('default', ['serve']);

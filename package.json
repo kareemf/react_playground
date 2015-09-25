@@ -18,12 +18,14 @@
   "homepage": "https://github.com/ajtowf/ng2_play#readme",
   "devDependencies": {
     "browser-sync": "^2.9.3",
+    "file-loader": "^0.8.4",
     "gulp": "^3.9.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-tslint": "^3.3.0-beta",
     "gulp-typescript": "^2.8.2",
     "superstatic": "^1.2.3",
-    "webpack": "^1.12.2"
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.11.0"
   },
   "dependencies": {
     "react": "^0.13.3",
