@@ -1,24 +1,21 @@
-## Angular 2 Play
+## React + TypeScript + Webpack + Gulp Playground
 
-Run the following commands to run the application
+# Setup
+
+    npm install -g gulp
+    npm install -g typescript
+    npm install -g tsd
+    npm install -g webpack
+    npm install -g webpack-dev-server
 
     npm install
+    tsd install
+
+# Development - launch the development server
+
     gulp
 
-## First look - Created Todo App
+# Package for production
 
-- Blog @ http://www.towfeek.se/2015/07/angularjs-2-overview/
-- Screencast @ https://youtu.be/rd3cLh_wn04
+    gulp webpack:build
 
-## Forms - Extended app with validation
-
-- Blog @ http://www.towfeek.se/2015/08/angularjs-2-0-forms-validation/
-- Screencast @ https://youtu.be/267ClmzfzvI
-
-## Routing — Everything you need to know in 13 minutes
-
-- Screencast @ https://youtu.be/ZsGRiHSaOxM
-
-## Build automation with Gulp
-
-- Screencast @ https://youtu.be/7xOubdqyqaY
