@@ -1,6 +1,6 @@
 ## React + TypeScript + Webpack + Gulp Playground
 
-# Setup
+### Setup
 
     npm install -g gulp
     npm install -g typescript
@@ -11,11 +11,11 @@
     npm install
     tsd install
 
-# Development - launch the development server
+### Development - launch the development server
 
     gulp
 
-# Package for production
+### Package for production
 
     gulp webpack:build
 
