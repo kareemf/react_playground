@@ -7,7 +7,14 @@ class ExampleApplication extends React.Component<{elapsed: number}, {}> {
         var message =
             `React has been successfully running for ${seconds} seconds!!`;
 
-        return <p>{ message } </p>;
+        return(
+            <div>
+                <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  Button
+                </button>
+                <p>{ message } </p>
+            </div>
+        );
     }
 }
 

@@ -1,6 +1,8 @@
 node_modules/
 dist/
+app/bower_components/
 app/**/*.js
 app/**/*.js.map
+
 # webpack hot updates
 *hot\-update.*
