@@ -10,6 +10,15 @@
     },
     "node/node.d.ts": {
       "commit": "54f064352a3615443f7bff4198078db15e28247b"
+    },
+    "es6-promise/es6-promise.d.ts": {
+      "commit": "ffceea9dd124d277c4597c7bd12930666ec074c5"
+    },
+    "object-assign/object-assign.d.ts": {
+      "commit": "ffceea9dd124d277c4597c7bd12930666ec074c5"
+    },
+    "flux/flux.d.ts": {
+      "commit": "e9be3cecf8a326d3e220c52b42d218169a7bb9f2"
     }
   }
 }

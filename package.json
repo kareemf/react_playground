@@ -27,7 +27,12 @@
     "webpack-dev-server": "^1.11.0"
   },
   "dependencies": {
+    "classnames": "^2.1.5",
+    "es6-promise": "^3.0.2",
     "exports-loader": "^0.6.2",
+    "flux": "^2.1.1",
+    "keymirror": "^0.1.1",
+    "object-assign": "^4.0.1",
     "react": "^0.13.3",
     "ts-loader": "^0.5.5",
     "typescript": "^1.6.2"

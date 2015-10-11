@@ -66,7 +66,6 @@ gulp.task('webpack:build', ['clean'], function(callback) {
 gulp.task('webpack-dev-server', function(callback) {
     // modify some webpack config options
     var myConfig = Object.create(webpackConfig);
-    myConfig.devtool = 'eval';
     myConfig.debug = true;
 
     // Start a webpack-dev-server
