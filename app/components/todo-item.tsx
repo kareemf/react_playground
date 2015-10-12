@@ -17,7 +17,6 @@ class TodoItem extends React.Component<{todo: any}, {isEditing: boolean}> {
     this._onDoubleClick = this._onDoubleClick.bind(this);
     this._onSave = this._onSave.bind(this);
     this._onDestroyClick = this._onDestroyClick.bind(this);
-
   }
 
   render() {
@@ -46,16 +45,23 @@ class TodoItem extends React.Component<{todo: any}, {isEditing: boolean}> {
         })}
         key={todo.id}>
         <div className='view'>
-          <input
-            className='toggle'
-            type='checkbox'
-            checked={todo.complete}
-            onChange={this._onToggleComplete}
-          />
-          <label onDoubleClick={this._onDoubleClick}>
-            {todo.text}
+          <label
+            htmlFor={this.props.todo.id}
+            onDoubleClick={this._onDoubleClick}
+            className='mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect'>
+            <input
+              id={this.props.todo.id}
+              type='checkbox'
+              className='mdl-checkbox__input'
+              checked={todo.complete}
+              onChange={this._onToggleComplete}/>
+            <span className='mdl-checkbox__label'>{todo.text}</span>
+            <button
+              className='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored'
+              onClick={this._onDestroyClick}>
+              <i className='material-icons'>clear</i>
+            </button>
           </label>
-          <button className='destroy' onClick={this._onDestroyClick} />
         </div>
         {input}
       </li>
@@ -84,7 +90,6 @@ class TodoItem extends React.Component<{todo: any}, {isEditing: boolean}> {
   _onDestroyClick() {
     TodoActions.destroy(this.props.todo.id);
   }
-
 };
 
 export = TodoItem;
